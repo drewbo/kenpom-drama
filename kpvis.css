@@ -1,0 +1,62 @@
+body {
+  font: 14px sans-serif;
+}
+
+div {
+   padding: 5px 5px 5px 5px
+}
+
+div.toolbar{
+   width: 200px;
+   height: 100%;
+   float: right;
+   background: rgba(112, 128, 144, 0.7); 
+}
+
+div.explain{
+    width: 200px;
+    height: 100%;
+    float: left;
+    background: rgba(112, 128, 144, 0.7);
+}
+
+div.main{
+    margin-left: 210px;
+    margin-right: 210px;
+    max-width: 960px;
+}
+
+a       { color: darkblue; }
+a:hover { color: rgb(86, 86, 175); }
+
+/*   svg   */
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  stroke-width: 1px;
+  shape-rendering: crispEdges;
+}
+
+.dot {
+  stroke: #FFF;
+  stroke-width: 1px;
+ 
+}
+
+.dot:hover {
+   stroke: #000;
+   stroke-width: 1px;
+   opacity: 0.8;   
+}
+
+.d3-tip {
+  line-height: 1.25;
+  font-weight: 600;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+

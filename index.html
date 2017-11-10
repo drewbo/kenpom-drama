@@ -1,0 +1,49 @@
+<head>
+
+
+<link rel="stylesheet" href="kpvis.css" type="text/css" />
+
+</head>
+
+<body>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+    <div class="explain"><h4>All 2013-2014 Division I College Basketball Games</h4>
+    This visualization shows selected statistics for all 2013-2014 college basketball games between two Division I teams. It should be used for exploratory purposes only; the full data set is available <a href="http://drewbo.com/data/kpdata.csv">here</a> if you're interested in pulling out some more meaningful corelations from the raw data. <br>
+
+    <h4>Legend</h4>
+    <li><strong>x-axis:</strong> <a href="http://drewbo.com/blog/2014/04/28/kenpom-drama/">perDrama</a>, a measure of game excitement</li>
+    <li><strong>y-axis: </strong><a href="http://kenpom.com/blog/index.php/weblog/four_factors/">combined eFG%</a>, based on Dean Oliver&#8217;s four factors concept</li>
+    <li><strong>Circle radius:</strong> <a href="http://drewbo.com/blog/2014/05/05/first-data-vis/">"Hype"</a>, the scaled harmonic mean of kenpom ratings entering the game </li>
+
+    <h4>Notes</h4>
+    <li>Selecting by conferences shows all games with at least one participant in that conference. If you want only conference games, use the radio buttons below.</li>
+    <li>The top two menus both allow multiple selections using the CTRL or &#8984; key.</li>
+    <li>This is still a work in progress; send feedback to <a href="mailto:drew@drewbo.com?Subject=KenPom%20Vizualisation" target="_top">drew@drewbo.com</a> or <a href="https://twitter.com/drewbo19">@drewbo19</a>.</li>
+
+
+
+
+
+    </div>
+ <div class="toolbar"> <h4> Select Conference: <br><select id="conf" multiple size=8></select><br>Select Team: <br><select id="team" multiple size=8></select></h4>
+     <h4> Highlight Conference: <select id="hlconf"></select><br>Highlight Team: <select id="hlteam"></select></h4>
+<form>
+<input type="radio" id="showall" name="gamesel" checked="checked">All Games<br>
+<input type="radio" id="conference" name="gamesel" >Conference Games Only <br>
+<input type="radio" id="tourney" name="gamesel" >Tournament Games Only
+</form>
+    <form>
+<input type="radio" id="nogrid" name="grid" checked="checked">No Grid<br>
+<input type="radio" id="medgrid" name="grid" >Median Grid
+</form>
+    </div>
+<div id="vis" class="main"><script src="kpvis_full.js"></script></div>
+
+
+
+
+
+</body>
+
+</html>
